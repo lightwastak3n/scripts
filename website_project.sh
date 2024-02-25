@@ -3,4 +3,4 @@
 # html - basic template, js - empty
 # css - reset https://meyerweb.com/eric/tools/css/reset/ and normalize https://unpkg.com/normalize.css@8.0.1/normalize.css
 
-cp -r ~/scripts/data/basic-template/. .
+cp -r ~/scripts/data/web-template/. .
