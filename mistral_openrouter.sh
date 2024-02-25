@@ -12,11 +12,11 @@ response=$(curl -s https://openrouter.ai/api/v1/chat/completions \
 -H "HTTP-Referer: http://localhost:5000/" \
 -H "X-Title: terminal-helper" \
 -d "{
-\"model\": \"mistralai/mistral-7b-instruct\",
+\"model\": \"mistralai/mistral-7b-instruct:free\",
 \"messages\": [
 	{\"role\": \"user\", \"content\": \"$prompt\"}
 ]
 }")
 
 reply=$(echo "$response" | jq -r '.choices[0].message.content')
-echo "$reply" | xclip -selection clipboard
+echo "$reply"

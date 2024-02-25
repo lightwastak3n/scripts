@@ -29,7 +29,10 @@ Some of them will remove your files if you run them which isn't my problem!
 - [ntfy.sh](ntfy.sh) - Uses https://ntfy.sh/ to basically send notifications to my phone 
 
 ## Productivity?
-- [obsidian_append.sh](obsidian_append.sh) - appends given text as a task to an obsidian file
+- [obsidian_append.sh](obsidian_append.sh) - appends given text as a task to an markdown(in this case [Obsidian](https://obsidian.md/)) file
 - [tmux_session.sh](tmux_session.sh) - Creates tmux session and populates it windows
 - [backup_hdd.sh](backup_hdd.sh) - uses `rsync` to backup data to another hdd and to external hdd. Mounts them if they are connected and not mounted.
+
+## AI chat
+- [mistral_openrouter.sh](mistral_openrouter.sh) - Uses Mistral 7b via [OpenRouter](https://openrouter.ai/). Uses args for prompts `./mistral_openrouter.sh "Tell me a joke"`
 
