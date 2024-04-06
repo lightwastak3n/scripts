@@ -3,13 +3,14 @@ Mostly bash scripts.
 Some of them will remove your files if you run them which isn't my problem!
 
 [search_scripts.sh](search_scripts.sh) - Uses fzf to find and run these scripts. I guess you can do aliases but I prefer this.
-Most of the scripts take input from prompt but some require arguments so you would need to run the directly.
+Most of the scripts take input from prompt but some require arguments so you would need to run them directly.
 
 ## Working with files
 ### Converting
 - [convert_to_jpg.sh](convert_to_jpg.sh) - Uses `convert` [ImageMagick](https://imagemagick.org/script/convert.php) to convert from different formats into `.jpg`. Keeps the same name and removes old files.
 - [webp_to_jpg.sh](webp_to_jpg.sh) - Converts `.webp` to `.jpg`. Superseded by the one above.
 - [rename_random.sh](rename_random.sh) - Renames files in the current dir to random.
+- [extract_subs.sh](extract_subs.sh) - Extracts subs(.srt) from .mkv files in the given directory
 
 ### Moving files
 - [organize_downloads.sh](organize_downloads.sh) - Creates dirs in `~/Downloads` and moves files based on their type to those dirs
@@ -33,6 +34,9 @@ Most of the scripts take input from prompt but some require arguments so you wou
 - [obsidian_append.sh](obsidian_append.sh) - appends given text as a task to a markdown(in this case [Obsidian](https://obsidian.md/)) file.
 - [tmux_session.sh](tmux_session.sh) - Creates tmux session and populates it windows
 - [backup_hdd.sh](backup_hdd.sh) - uses `rsync` to backup data to another hdd and to external hdd. Mounts them if they are connected and not mounted.
+
+## Linux
+- [fix_monitors.sh](fix_monitors.sh) - Fixes resolution and rearranges monitors
 
 ## AI chat
 - [mistral_openrouter.sh](mistral_openrouter.sh) - Uses Mistral 7b via [OpenRouter](https://openrouter.ai/). Prompt provided as arg `./mistral_openrouter.sh "Tell me a joke"`
