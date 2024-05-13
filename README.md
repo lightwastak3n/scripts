@@ -14,6 +14,7 @@ Most of the scripts take input from prompt but some require arguments so you wou
 
 ### Moving files
 - [organize_downloads.sh](organize_downloads.sh) - Creates dirs in `~/Downloads` and moves files based on their type to those dirs
+- [delete_vim_swap.sh](delete_vim_swap.sh) - Deletes vim swap files
 
 ### Project templates
 - [python_project.sh](python_project.sh) - Creates python project - creates .venv and activates it, gets .gitignore from github, pyright fix for nvim
