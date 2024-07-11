@@ -3,5 +3,6 @@
 # Format it as markdown task
 
 path="$HOME/Documents/Obsidian/Main_vault/00 Inbox/Stuff.md"
+date_time=$(date +"%Y-%m-%d %H:%M:%S")
 read -p "Task: " task
-printf "\n- [ ] %s" "$task" >> "$path"
+printf "- [ ] %s\n" "$date_time $task" >> "$path"
