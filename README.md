@@ -39,6 +39,7 @@ Most of the scripts take input from prompt but some require arguments so you wou
 ## Linux
 - [fix_monitors.sh](fix_monitors.sh) - Fixes resolution and rearranges monitors
 
-## AI chat
+## AI
 - [mistral_openrouter.sh](mistral_openrouter.sh) - Uses Mistral 7b via [OpenRouter](https://openrouter.ai/). Prompt provided as arg `./mistral_openrouter.sh "Tell me a joke"`
+- [switch-model.sh](switch-model.sh) - Interactive [fzf](https://github.com/junegunn/fzf) dropdown to switch models for [opencode](https://opencode.ai) agents
 
