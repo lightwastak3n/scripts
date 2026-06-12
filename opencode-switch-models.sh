@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
-# switch-model.sh — fzf dropdown to change the model for opencode agents
-# Usage: bash switch-model.sh [agent-name]
+# opencode-switch-models.sh — fzf dropdown to change the model for opencode agents
+# Usage: bash opencode-switch-models.sh [agent-name]
 
 AGENTS_DIR="$HOME/.config/opencode/agents"
 
-MODELS=(
-    "zai-coding-plan/glm-5.1"
-    "opencode-go/glm-5.1"
-    "opencode-go/kimi-k2.6"
-    "opencode-go/deepseek-v4-pro"
-    "opencode-go/deepseek-v4-flash"
-    "opencode-go/mimo-v2.5"
-    "opencode-go/mimo-v2.5-pro"
-)
+MODELS=($(opencode models 2>/dev/null))
+
+if [ ${#MODELS[@]} -eq 0 ]; then
+    echo "Failed to load models from 'opencode models'"
+    exit 1
+fi
 
 get_current_model() {
     sed -n 's/^model: //p' "$1"
