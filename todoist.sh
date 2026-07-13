@@ -7,6 +7,19 @@
 # https://api.todoist.com/rest/v2/sections?project_id=2212737897
 # Basically just used to add groceries since terminal is always open and I usually forget what to add in 5 secs
 
+usage() {
+    echo "Usage: todoist.sh"
+    echo
+    echo "Interactive prompt to add a task to Todoist."
+    echo
+    echo "Projects:"
+    echo "  inbox  - Add to inbox (Next Actions section)"
+    echo "  dm     - Add to Kupovina (DM section)"
+    echo "  <empty> - Add to Kupovina (default)"
+    exit 0
+}
+
+[[ "${1:-}" == "-h" || "${1:-}" == "--help" ]] && usage
 
 KEY=$todoist_api
 

@@ -5,6 +5,21 @@
 # gitignore creates .gitignore based on githubs and appends pyright fix if needed
 # venv creates venv and activates it
 
+usage() {
+    echo "Usage: python_project.sh [options]"
+    echo
+    echo "Set up a Python project with optional scaffolding."
+    echo "Run without flags for interactive prompts."
+    echo
+    echo "Options:"
+    echo "  -p, --pyright     Create pyrightconfig.json"
+    echo "  -v, --venv        Create .venv virtual environment"
+    echo "  -g, --gitignore   Create .gitignore from GitHub template"
+    exit 0
+}
+
+[[ "${1:-}" == "-h" || "${1:-}" == "--help" ]] && usage
+
 pyright=false
 venv=false
 gitignore=false
@@ -32,7 +47,7 @@ else
                 gitignore=true
                 ;;
             *)
-                echo "Too many args: $1"
+                echo "Unknown option: $1"
                 exit 1
                 ;;
         esac

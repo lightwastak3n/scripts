@@ -2,6 +2,21 @@
 # Backup to other HDD and to external HDD
 # Probably bad but it works for now
 
+usage() {
+    echo "Usage: backup_hdd.sh"
+    echo
+    echo "Backup /usr/local and home directory to mounted drives."
+    echo
+    echo "Targets:"
+    echo "  AlexLaptop1 - Laptop HDD (auto-mounts if connected)"
+    echo "  Backup      - External HDD (skips if not mounted)"
+    echo
+    echo "Uses rsync. Sends ntfy notification when done."
+    exit 0
+}
+
+[[ "${1:-}" == "-h" || "${1:-}" == "--help" ]] && usage
+
 backup () {
 	sudo rsync -aAXHv --info=progress2 /usr/local/ "$1"
 	notify-send "/usr/local backed up to $1"

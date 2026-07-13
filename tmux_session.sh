@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 # Creates tmux session with different windows
 
+usage() {
+    echo "Usage: tmux_session.sh"
+    echo
+    echo "Create a 'main' tmux session with predefined windows:"
+    echo "  0: nvim"
+    echo "  1: run"
+    echo "  2: git (sshgit)"
+    echo "  3: nvim-2"
+    echo "  4: ssh"
+    echo "  5: shell"
+    echo
+    echo "Attaches to window 0 (nvim) on start."
+    exit 0
+}
+
+[[ "${1:-}" == "-h" || "${1:-}" == "--help" ]] && usage
+
 cd ~/Documents/Code/
 session="main"
 tmux new-session -d -s $session
