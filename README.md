@@ -35,7 +35,7 @@ Most of the scripts take input from prompt but some require arguments so you wou
 - [obsidian_append.sh](obsidian_append.sh) - appends given text as a task to a markdown(in this case [Obsidian](https://obsidian.md/)) file.
 - [tmux_session.sh](tmux_session.sh) - Creates tmux session and populates it windows
 - [backup_hdd.sh](backup_hdd.sh) - uses `rsync` to backup data to another hdd and to external hdd. Mounts them if they are connected and not mounted.
-- [zox.sh](zox.sh) - Fuzzy directory jumper with fzf. Saves visited dirs and lets you jump to them by name. Inspired by [zoxide](https://github.com/ajeetdsouza/zoxide).
+- [zox.sh](zox.sh) - Directory jumper with fzf. Saves visited dirs and lets you jump to them by name. Existing paths take priority over store searches. Use `zox --help` for options including `--list`, `--remove`, and `--prune`. Inspired by [zoxide](https://github.com/ajeetdsouza/zoxide).
 - [merge-cleanup.sh](merge-cleanup.sh) - After merging a PR: checkout base branch, pull latest, prune remote, and delete the feature branch.
 
 ## Linux
